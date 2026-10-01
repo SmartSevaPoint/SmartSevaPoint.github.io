@@ -569,6 +569,22 @@ footer::before {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.trust-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.trust-card .trust-icon {
+  transition: transform 0.25s ease;
+}
+
+.trust-card:hover .trust-icon {
+  transform: scale(1.12);
+}
   </style>
 </head>
 
