@@ -142,6 +142,34 @@
     max-width: 300px;
   }
 }
+.why-section {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 35px 25px;
+  text-align: center;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.why-card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.why-card h3 {
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  line-height: 1.6;
+}
   </style>
 </head>
 
@@ -210,6 +238,33 @@ class="location-btn"
 target="_blank">
 📍 Get Directions
 </a>
+</section>
+<section class="why-section">
+  <h2 class="title">Why Choose Smart Seva Point?</h2>
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <h3>⚡ Fast Service</h3>
+      <p>Quick and convenient assistance for your digital needs.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>🤝 Trusted Assistance</h3>
+      <p>Helpful support for CSC, banking and document services.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>📱 Easy Process</h3>
+      <p>Simple digital process designed to save your time.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>📍 Local Support</h3>
+      <p>Convenient digital service assistance for local customers.</p>
+    </div>
+
+  </div>
 </section>
 </body>
 </html>
