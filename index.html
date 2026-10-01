@@ -170,6 +170,39 @@
 .why-card p {
   line-height: 1.6;
 }
+}
+
+.faq-box {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.faq-box h3 {
+  position: relative;
+  padding-right: 30px;
+}
+
+.faq-box h3::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+}
+
+.faq-box p {
+  display: none;
+  margin-top: 12px;
+}
+
+.faq-box.active p {
+  display: block;
+}
+
+.faq-box.active h3::after {
+  content: "−";
+}
+
+</style>
   </style>
 </head>
 
@@ -289,5 +322,12 @@ target="_blank">
     <p>Select the required service and use the WhatsApp option to contact us.</p>
   </div>
 </section>
+<script>
+  document.querySelectorAll(".faq-box").forEach(function(box) {
+    box.addEventListener("click", function() {
+      box.classList.toggle("active");
+    });
+  });
+</script>
 </body>
 </html>
