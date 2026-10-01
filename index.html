@@ -528,6 +528,47 @@ footer::before {
   font-weight: bold;
   margin-bottom: 8px;
 }
+.trust-section {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.trust-card {
+  background: white;
+  padding: 22px 15px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.trust-card .trust-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.trust-card h3 {
+  color: #0757b8;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.trust-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
   </style>
 </head>
 
@@ -692,6 +733,37 @@ target="_blank">
     <div class="why-card">
       <h3>📍 Local Support</h3>
       <p>Convenient digital service assistance for local customers.</p>
+    </div>
+
+  </div>
+</section>
+<section class="trust-section">
+  <h2 class="title">Smart Seva Point</h2>
+
+  <div class="trust-grid">
+
+    <div class="trust-card">
+      <div class="trust-icon">⚡</div>
+      <h3>Quick Assistance</h3>
+      <p>Fast support for your digital service needs.</p>
+    </div>
+
+    <div class="trust-card">
+      <div class="trust-icon">🛠️</div>
+      <h3>Multiple Services</h3>
+      <p>CSC, banking, document and digital services.</p>
+    </div>
+
+    <div class="trust-card">
+      <div class="trust-icon">📱</div>
+      <h3>Easy Contact</h3>
+      <p>Connect easily through WhatsApp or phone.</p>
+    </div>
+
+    <div class="trust-card">
+      <div class="trust-icon">📍</div>
+      <h3>Local Support</h3>
+      <p>Convenient assistance for local customers.</p>
     </div>
 
   </div>
