@@ -585,6 +585,22 @@ footer::before {
 .trust-card:hover .trust-icon {
   transform: scale(1.12);
 }
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card .service-icon {
+  transition: transform 0.25s ease;
+}
+
+.card:hover .service-icon {
+  transform: scale(1.12);
+}
   </style>
 </head>
 
