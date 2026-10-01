@@ -270,6 +270,25 @@
   margin: 7px 0;
   line-height: 1.4;
 }
+.service-search {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  padding: 13px 18px;
+  width: 100%;
+  border: 1px solid #d5dbe5;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.service-search:focus {
+  border-color: #0757b8;
+  box-shadow: 0 0 0 3px rgba(7,87,184,0.1);
+}
+
+.card.hidden {
+  display: none;
+}
   </style>
 </head>
 
@@ -287,7 +306,12 @@
 
   <section id="services">
   <h2 class="title">Our Services</h2>
-
+<input
+  type="text"
+  id="serviceSearch"
+  class="service-search"
+  placeholder="🔎 Search a service..."
+  aria-label="Search services">
   <div class="services">
 
     <a href="https://wa.me/918360542871?text=Hello%2C%20I%20need%20CSC%20Services"
@@ -461,6 +485,24 @@ target="_blank">
     window.scrollTo({
       top: 0,
       behavior: "smooth"
+    });
+  });
+</script>
+<script>
+  const serviceSearch = document.getElementById("serviceSearch");
+  const serviceCards = document.querySelectorAll(".services .card");
+
+  serviceSearch.addEventListener("input", function() {
+    const searchText = serviceSearch.value.toLowerCase();
+
+    serviceCards.forEach(function(card) {
+      const serviceText = card.textContent.toLowerCase();
+
+      if (serviceText.includes(searchText)) {
+        card.classList.remove("hidden");
+      } else {
+        card.classList.add("hidden");
+      }
     });
   });
 </script>
