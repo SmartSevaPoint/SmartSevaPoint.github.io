@@ -242,6 +242,24 @@
 #backToTop:hover {
   opacity: 0.85;
 }
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card strong {
+  display: inline-block;
+  margin-top: 12px;
+  transition: transform 0.25s ease;
+}
+
+.card:hover strong {
+  transform: translateX(4px);
+}
   </style>
 </head>
 
